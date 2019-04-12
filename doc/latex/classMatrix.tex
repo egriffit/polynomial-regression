@@ -1,0 +1,300 @@
+\hypertarget{classMatrix}{}\doxysection{Matrix Class Reference}
+\label{classMatrix}\index{Matrix@{Matrix}}
+
+
+{\ttfamily \#include $<$Matrix.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMatrix_a2dba13c45127354c9f75ef576f49269b}{Matrix}} ()
+\item 
+\mbox{\hyperlink{classMatrix_a8babd004b9967f110b1627a3017ee0ab}{Matrix}} (int row, int col)
+\item 
+\mbox{\hyperlink{classMatrix_a56211171fa5039c6edd54d013b47fcd8}{Matrix}} (const \mbox{\hyperlink{classMatrix}{Matrix}} \&src)
+\item 
+\mbox{\hyperlink{classMatrix_a9b1c3627f573d78a2f08623fdfef990f}{$\sim$\+Matrix}} ()
+\item 
+int \mbox{\hyperlink{classMatrix_a073371dea3a75e75ccc7cfc3e5270ec7}{get\+Num\+Rows}} () const
+\item 
+int \mbox{\hyperlink{classMatrix_a8efe3af02674702ae93e43df09fe1764}{get\+Num\+Cols}} () const
+\item 
+void \mbox{\hyperlink{classMatrix_a3d25139c18bee72ecd8140a6c5fa172d}{set\+Num\+Rows}} (int row)
+\item 
+void \mbox{\hyperlink{classMatrix_a928ce306545125288607e3384c01d3dc}{set\+Num\+Cols}} (int col)
+\item 
+void \mbox{\hyperlink{classMatrix_a3f6ad9c95a574ce5af13f53c3c4c5c53}{read}} (std\+::istream \&ins)
+\item 
+void \mbox{\hyperlink{classMatrix_a74ec068714504a5e08161608fc4e91b6}{display}} (std\+::ostream \&outs) const
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a466e65323a4b4c616fa8aacb21818171}{operator+}} (const \mbox{\hyperlink{classMatrix}{Matrix}} \&rhs)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a9e0b66c2b82a2c59d366b09dbd28f721}{operator-\/}} (const \mbox{\hyperlink{classMatrix}{Matrix}} \&rhs)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_a0c28775f5ae756868fb85a4cda1f055a}{operator$\ast$}} (const \mbox{\hyperlink{classMatrix}{Matrix}} \&rhs)
+\item 
+double \& \mbox{\hyperlink{classMatrix_a39ccc046734f8332b0198314118b5890}{operator()}} (int row, int col)
+\item 
+double \mbox{\hyperlink{classMatrix_aad5fc68fd2976512c9fff3bc8553fa47}{operator()}} (int row, int col) const
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_ae23f817021383e3c8636a714dcba1d21}{transpose}} ()
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{classMatrix_ac4f5e7d4bb1bfd6586bd3384bd2a02b0}{inverse}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Related Functions}
+(Note that these are not member functions.) \begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classMatrix_ab09e4c6dcc538014ec84578c93214027}{operator$<$$<$}} (std\+::ostream \&outs, const \mbox{\hyperlink{classMatrix}{Matrix}} \&prt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The matrix class. This class will handle all matrix operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMatrix_a2dba13c45127354c9f75ef576f49269b}\label{classMatrix_a2dba13c45127354c9f75ef576f49269b}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default \mbox{\hyperlink{classMatrix}{Matrix}} Constructor \mbox{\Hypertarget{classMatrix_a8babd004b9967f110b1627a3017ee0ab}\label{classMatrix_a8babd004b9967f110b1627a3017ee0ab}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classMatrix}{Matrix}} Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & the number of rows \\
+\hline
+{\em col} & the number of columns \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatrix_a56211171fa5039c6edd54d013b47fcd8}\label{classMatrix_a56211171fa5039c6edd54d013b47fcd8}} 
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Matrix\+::\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrix}{Matrix}} \&}]{src }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classMatrix}{Matrix}} Copy Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the matrix to be copied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatrix_a9b1c3627f573d78a2f08623fdfef990f}\label{classMatrix_a9b1c3627f573d78a2f08623fdfef990f}} 
+\index{Matrix@{Matrix}!````~Matrix@{$\sim$Matrix}}
+\index{````~Matrix@{$\sim$Matrix}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{$\sim$Matrix()}{~Matrix()}}
+{\footnotesize\ttfamily Matrix\+::$\sim$\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classMatrix}{Matrix}} Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMatrix_a74ec068714504a5e08161608fc4e91b6}\label{classMatrix_a74ec068714504a5e08161608fc4e91b6}} 
+\index{Matrix@{Matrix}!display@{display}}
+\index{display@{display}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Matrix\+::display (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{outs }\end{DoxyParamCaption}) const}
+
+Print the matrix
+
+
+\begin{DoxyParams}{Parameters}
+{\em outs} & the output stream \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatrix_a8efe3af02674702ae93e43df09fe1764}\label{classMatrix_a8efe3af02674702ae93e43df09fe1764}} 
+\index{Matrix@{Matrix}!getNumCols@{getNumCols}}
+\index{getNumCols@{getNumCols}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{getNumCols()}{getNumCols()}}
+{\footnotesize\ttfamily int Matrix\+::get\+Num\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of columns \mbox{\Hypertarget{classMatrix_a073371dea3a75e75ccc7cfc3e5270ec7}\label{classMatrix_a073371dea3a75e75ccc7cfc3e5270ec7}} 
+\index{Matrix@{Matrix}!getNumRows@{getNumRows}}
+\index{getNumRows@{getNumRows}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{getNumRows()}{getNumRows()}}
+{\footnotesize\ttfamily int Matrix\+::get\+Num\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of rows \mbox{\Hypertarget{classMatrix_ac4f5e7d4bb1bfd6586bd3384bd2a02b0}\label{classMatrix_ac4f5e7d4bb1bfd6586bd3384bd2a02b0}} 
+\index{Matrix@{Matrix}!inverse@{inverse}}
+\index{inverse@{inverse}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{inverse()}{inverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Invert a matrix
+
+\begin{DoxyReturn}{Returns}
+result matrix resulting from the inversion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix_a39ccc046734f8332b0198314118b5890}\label{classMatrix_a39ccc046734f8332b0198314118b5890}} 
+\index{Matrix@{Matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double \& Matrix\+::operator() (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+Overloaded () operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row of desired element \\
+\hline
+{\em col} & column of desired element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value at the specified row and column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix_aad5fc68fd2976512c9fff3bc8553fa47}\label{classMatrix_aad5fc68fd2976512c9fff3bc8553fa47}} 
+\index{Matrix@{Matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Matrix\+::operator() (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+Overloaded () operator with constant object
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row of desired element \\
+\hline
+{\em col} & column of desired element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value at the specified row and column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix_a0c28775f5ae756868fb85a4cda1f055a}\label{classMatrix_a0c28775f5ae756868fb85a4cda1f055a}} 
+\index{Matrix@{Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrix}{Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded $\ast$ operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & matrix on the right hand side of the multiplication \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+matrix resulting from the multiplication 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix_a466e65323a4b4c616fa8aacb21818171}\label{classMatrix_a466e65323a4b4c616fa8aacb21818171}} 
+\index{Matrix@{Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrix}{Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded + operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & matrix on the right hand side of the addition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+matrix resulting from the addition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix_a9e0b66c2b82a2c59d366b09dbd28f721}\label{classMatrix_a9e0b66c2b82a2c59d366b09dbd28f721}} 
+\index{Matrix@{Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrix}{Matrix}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Overloaded -\/ operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & matrix on the right hand side of the subtraction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+matrix resulting from the subtraction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix_a3f6ad9c95a574ce5af13f53c3c4c5c53}\label{classMatrix_a3f6ad9c95a574ce5af13f53c3c4c5c53}} 
+\index{Matrix@{Matrix}!read@{read}}
+\index{read@{read}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Matrix\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{ins }\end{DoxyParamCaption})}
+
+Read in the matrix data
+
+
+\begin{DoxyParams}{Parameters}
+{\em ins} & the input stream \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatrix_a928ce306545125288607e3384c01d3dc}\label{classMatrix_a928ce306545125288607e3384c01d3dc}} 
+\index{Matrix@{Matrix}!setNumCols@{setNumCols}}
+\index{setNumCols@{setNumCols}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{setNumCols()}{setNumCols()}}
+{\footnotesize\ttfamily void Matrix\+::set\+Num\+Cols (\begin{DoxyParamCaption}\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Modify the number of columns
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & new number of columns \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix_a3d25139c18bee72ecd8140a6c5fa172d}\label{classMatrix_a3d25139c18bee72ecd8140a6c5fa172d}} 
+\index{Matrix@{Matrix}!setNumRows@{setNumRows}}
+\index{setNumRows@{setNumRows}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{setNumRows()}{setNumRows()}}
+{\footnotesize\ttfamily void Matrix\+::set\+Num\+Rows (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Modify the number of rows
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & new number of rows \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of rows 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix_ae23f817021383e3c8636a714dcba1d21}\label{classMatrix_ae23f817021383e3c8636a714dcba1d21}} 
+\index{Matrix@{Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} Matrix\+::transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transpose a matrix (i.\+e. switch the data in the rows and columns)
+
+\begin{DoxyReturn}{Returns}
+matrix resulting from the multiplication 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classMatrix_ab09e4c6dcc538014ec84578c93214027}\label{classMatrix_ab09e4c6dcc538014ec84578c93214027}} 
+\index{Matrix@{Matrix}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{outs,  }\item[{const \mbox{\hyperlink{classMatrix}{Matrix}} \&}]{prt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+Overloaded Stream Insertion Operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em outs} & the output stream \\
+\hline
+{\em prt} & the \mbox{\hyperlink{classMatrix}{Matrix}} to be printed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the modified output stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Matrix_8h}{Matrix.\+h}}\item 
+src/Matrix.\+cpp\end{DoxyCompactItemize}

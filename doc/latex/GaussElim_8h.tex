@@ -1,0 +1,166 @@
+\hypertarget{GaussElim_8h}{}\doxysection{src/\+Gauss\+Elim.h File Reference}
+\label{GaussElim_8h}\index{src/GaussElim.h@{src/GaussElim.h}}
+{\ttfamily \#include \char`\"{}Matrix.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{GaussElim_8h_a98cff003f3271fb6505aa73f7f18b5ba}{find\+Largest\+Row\+By\+Col}} (const \mbox{\hyperlink{classMatrix}{Matrix}} \&matrix, int col)
+\item 
+void \mbox{\hyperlink{GaussElim_8h_a45a1ecddf5fb888027ac1097b9b7674b}{swap\+Rows}} (\mbox{\hyperlink{classMatrix}{Matrix}} \&matrix, int a, int b)
+\item 
+void \mbox{\hyperlink{GaussElim_8h_a6202632ab47d76fb4a0c00f81c72d4a4}{scale\+Row}} (\mbox{\hyperlink{classMatrix}{Matrix}} \&matrix, int row, double scale)
+\item 
+void \mbox{\hyperlink{GaussElim_8h_aceb8737f8b02d799612a43363c48d6e6}{add\+Rows}} (\mbox{\hyperlink{classMatrix}{Matrix}} \&matrix, int a, int b, double scale=1)
+\item 
+void \mbox{\hyperlink{GaussElim_8h_a49057cc4cb45fee76de0402f61bbfd08}{eliminate}} (\mbox{\hyperlink{classMatrix}{Matrix}} \&matrix, int col)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{GaussElim_8h_a9420d71b81ec3a7e40ca8ab1433f54c6}{get\+Coefficients}} (\mbox{\hyperlink{classMatrix}{Matrix}} matrix)
+\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \mbox{\hyperlink{GaussElim_8h_aca8649ebf9324dbfc7f9c6cbf100171b}{get\+Gauss\+Matrix}} (\mbox{\hyperlink{classMatrix}{Matrix}} lhs, \mbox{\hyperlink{classMatrix}{Matrix}} rhs)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{GaussElim_8h_a46761a35b2cb1b66b4e5b348da8821b0}{gauss\+Driver}} (\mbox{\hyperlink{classMatrix}{Matrix}} lhs, \mbox{\hyperlink{classMatrix}{Matrix}} rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gaussian Elimination Functions. Functions used during Gaussian Elimination of a matrix. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{GaussElim_8h_aceb8737f8b02d799612a43363c48d6e6}\label{GaussElim_8h_aceb8737f8b02d799612a43363c48d6e6}} 
+\index{GaussElim.h@{GaussElim.h}!addRows@{addRows}}
+\index{addRows@{addRows}!GaussElim.h@{GaussElim.h}}
+\doxysubsubsection{\texorpdfstring{addRows()}{addRows()}}
+{\footnotesize\ttfamily void add\+Rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}} \&}]{matrix,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{double}]{scale = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Add two rows of a matrix together
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & reference to the matrix \\
+\hline
+{\em a} & row that will be mutated \\
+\hline
+{\em b} & row that will be added to the other row \\
+\hline
+{\em scale} & scaling factor for the row to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{GaussElim_8h_a49057cc4cb45fee76de0402f61bbfd08}\label{GaussElim_8h_a49057cc4cb45fee76de0402f61bbfd08}} 
+\index{GaussElim.h@{GaussElim.h}!eliminate@{eliminate}}
+\index{eliminate@{eliminate}!GaussElim.h@{GaussElim.h}}
+\doxysubsubsection{\texorpdfstring{eliminate()}{eliminate()}}
+{\footnotesize\ttfamily void eliminate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}} \&}]{matrix,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+Eliminate all other elements in the column
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & reference to the matrix where elimination will occur \\
+\hline
+{\em col} & column of elimination \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{GaussElim_8h_a98cff003f3271fb6505aa73f7f18b5ba}\label{GaussElim_8h_a98cff003f3271fb6505aa73f7f18b5ba}} 
+\index{GaussElim.h@{GaussElim.h}!findLargestRowByCol@{findLargestRowByCol}}
+\index{findLargestRowByCol@{findLargestRowByCol}!GaussElim.h@{GaussElim.h}}
+\doxysubsubsection{\texorpdfstring{findLargestRowByCol()}{findLargestRowByCol()}}
+{\footnotesize\ttfamily int find\+Largest\+Row\+By\+Col (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrix}{Matrix}} \&}]{matrix,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+Find largest row of a matrix based on the elements in a given column
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & \mbox{\hyperlink{classMatrix}{Matrix}} to be searched \\
+\hline
+{\em col} & Column to search through\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of the row with the largest element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{GaussElim_8h_a46761a35b2cb1b66b4e5b348da8821b0}\label{GaussElim_8h_a46761a35b2cb1b66b4e5b348da8821b0}} 
+\index{GaussElim.h@{GaussElim.h}!gaussDriver@{gaussDriver}}
+\index{gaussDriver@{gaussDriver}!GaussElim.h@{GaussElim.h}}
+\doxysubsubsection{\texorpdfstring{gaussDriver()}{gaussDriver()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ gauss\+Driver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{lhs,  }\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{rhs }\end{DoxyParamCaption})}
+
+Driver for gaussian elimination
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & Left matrix to be merged for elimination \\
+\hline
+{\em rhs} & Right matrix to be merged for elimination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of coefficients gathered from final matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{GaussElim_8h_a9420d71b81ec3a7e40ca8ab1433f54c6}\label{GaussElim_8h_a9420d71b81ec3a7e40ca8ab1433f54c6}} 
+\index{GaussElim.h@{GaussElim.h}!getCoefficients@{getCoefficients}}
+\index{getCoefficients@{getCoefficients}!GaussElim.h@{GaussElim.h}}
+\doxysubsubsection{\texorpdfstring{getCoefficients()}{getCoefficients()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ get\+Coefficients (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{matrix }\end{DoxyParamCaption})}
+
+Find the coefficients after gaussian elimination is complete
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix resulting from Gaussian elimination\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of coefficients gathered from final matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{GaussElim_8h_aca8649ebf9324dbfc7f9c6cbf100171b}\label{GaussElim_8h_aca8649ebf9324dbfc7f9c6cbf100171b}} 
+\index{GaussElim.h@{GaussElim.h}!getGaussMatrix@{getGaussMatrix}}
+\index{getGaussMatrix@{getGaussMatrix}!GaussElim.h@{GaussElim.h}}
+\doxysubsubsection{\texorpdfstring{getGaussMatrix()}{getGaussMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix}{Matrix}} get\+Gauss\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{lhs,  }\item[{\mbox{\hyperlink{classMatrix}{Matrix}}}]{rhs }\end{DoxyParamCaption})}
+
+Create the gaussian matrix from two matrices
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & matrix on the left hand side of the equation \\
+\hline
+{\em rhs} & single column matrix on the right hand side of the equation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+matrix ready for gaussian elimination 
+\end{DoxyReturn}
+\mbox{\Hypertarget{GaussElim_8h_a6202632ab47d76fb4a0c00f81c72d4a4}\label{GaussElim_8h_a6202632ab47d76fb4a0c00f81c72d4a4}} 
+\index{GaussElim.h@{GaussElim.h}!scaleRow@{scaleRow}}
+\index{scaleRow@{scaleRow}!GaussElim.h@{GaussElim.h}}
+\doxysubsubsection{\texorpdfstring{scaleRow()}{scaleRow()}}
+{\footnotesize\ttfamily void scale\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}} \&}]{matrix,  }\item[{int}]{row,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+Scale a row by a scaling factor
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & reference to the matrix whose row will be scaled \\
+\hline
+{\em row} & row to be scaled \\
+\hline
+{\em scale} & scaling factor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{GaussElim_8h_a45a1ecddf5fb888027ac1097b9b7674b}\label{GaussElim_8h_a45a1ecddf5fb888027ac1097b9b7674b}} 
+\index{GaussElim.h@{GaussElim.h}!swapRows@{swapRows}}
+\index{swapRows@{swapRows}!GaussElim.h@{GaussElim.h}}
+\doxysubsubsection{\texorpdfstring{swapRows()}{swapRows()}}
+{\footnotesize\ttfamily void swap\+Rows (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}} \&}]{matrix,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+Swap two rows in a matrix
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & reference to the matrix where the rows will be swapped \\
+\hline
+{\em a} & first row to be swapped \\
+\hline
+{\em b} & second row to be swapped \\
+\hline
+\end{DoxyParams}
